@@ -1,0 +1,1 @@
+Sabe aquele joguinho da cobrinha de celulares Nokia antigos, e tals? Refiz esse mesmo jogo com HTML, CSS e JavaScript.
