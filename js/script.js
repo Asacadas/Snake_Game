@@ -46,6 +46,13 @@ function iniciarJogo() {
     if(snake[0].y > 15 * box && direction == "up") snake[0].y = 0;
     if(snake[0].y < 0 && direction == "down") snake[0].y = 16 * box;
 
+    for(i = 1; i < snake.length; i++){ //condicional para dar game over qd a cobra se choca
+        if(snake[0].x == snake[i].x && snake[0].y == snake[i].y){
+            clearInterval(jogo);
+            alert("Fim de Jogo");
+        }
+    }
+    
     criarBG();
     criarCobrinha();
     drawFood();
@@ -65,7 +72,6 @@ function iniciarJogo() {
       food.y = Math.floor(Math.random() * 15 + 1) * box  
     }
 
-    //snake.pop();
 
     let newHead = {
         x: snakeX,
